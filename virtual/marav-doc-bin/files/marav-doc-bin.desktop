@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=doc
+Exec=/usr/bin/marav-doc-bin
+NoDisplay=true
