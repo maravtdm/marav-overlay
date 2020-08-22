@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name><![CDATA[marav-overlay]]></name>
+    <description lang="en"><![CDATA[Marav Overlay]]></description>
+    <homepage>https://github.com/maravtdm/marav-overlay</homepage>
+    <owner type="person">
+      <email>marav@matoda.pw</email>
+      <name><![CDATA[Marav]]></name>
+    </owner>
+    <source type="git">git://github.com/maravtdm/marav-overlay.git</source>
+  </repo>
+</repositories>
