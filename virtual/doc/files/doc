@@ -1,0 +1,51 @@
+!/usr/bin/env python
+# coding=UTF-8
+
+import sys
+import os
+
+#ip = '88.191.174.120'
+share = '/mnt/doc'
+verif = os.system('mount | grep /mnt/doc ' + ' >/dev/null 2>&1')
+#print(verif)
+#access = os.system('ping ' + ' -w1 -c1 ' + ip + ' >/dev/null 2>&1')
+
+red = '\x1b[6;31m'
+green = '\x1b[6;32m'
+yellow = '\x1b[6;33m'
+blue = '\x1b[6;34m'
+end = '\x1b[0m'
+
+if len(sys.argv) > 1:
+    if sys.argv[1] == 'm':
+        if verif == 256:
+            os.system('sudo mount ' + share)
+            if verif == 256:
+                print('Partage ' + yellow + share + end + ' monté')
+        else:
+            print('Le partage ' + share + blue + ' est déjà monté ' + end)
+
+    if sys.argv[1] == 'u':
+        if verif == 0:
+            os.system('sudo umount ' + share)
+            if verif == 0:
+                print('Partage ' + yellow + share + end + ' démonté')
+        else:
+            print('Le partage ' + share + red + " n'est pas monté " + end)
+
+    if sys.argv[1] == 'uf':
+        if verif == 0:
+            os.system('sudo umount -f ' + share)
+            if verif == 0:
+                print('Partage ' + yellow + share + end + ' démonté')
+        else:
+            print('Le partage ' + share + red + " n'est pas monté " + end)
+
+    if sys.argv[1] == 's':
+        if verif == 0:
+            print('Le partage ' + share + green + ' est monté ' + end)
+        else:
+            print('Le partage ' + share + red + " n'est pas monté " + end)
+            sys.exit(0)
+else:
+    print('Usage : ' + yellow + 'm' + end + ' (mount) ' + yellow + 'u' + end + ' (umount) ' + yellow + 'uf' + end + ' (force umount) ' + yellow + 's' + end + ' (status)')
