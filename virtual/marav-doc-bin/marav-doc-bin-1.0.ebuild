@@ -21,4 +21,5 @@ S="${WORKDIR}"
 src_install() {
 	dobin ${FILESDIR}/${PN}
 	insinto ${HOME}/bin/
+	doins ${FILESDIR}/${PN}.desktop
 }
