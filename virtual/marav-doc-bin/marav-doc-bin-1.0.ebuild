@@ -20,6 +20,6 @@ S="${WORKDIR}"
 
 src_install() {
 	dobin ${FILESDIR}/${PN}
-	insinto ${HOME}/bin/
+	insinto /usr/local/bin/
 	doins ${FILESDIR}/${PN}.desktop
 }
