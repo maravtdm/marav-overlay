@@ -21,7 +21,7 @@ if len(sys.argv) > 1:
         if verif == 256:
             os.system('sudo mount ' + share)
             if verif == 256:
-                print('Partage ' + yellow + share + end + ' monté')
+                print('Partage ' + share + green + ' monté' + end)
         else:
             print('Le partage ' + share + blue + ' est déjà monté ' + end)
 
@@ -29,17 +29,17 @@ if len(sys.argv) > 1:
         if verif == 0:
             os.system('sudo umount ' + share)
             if verif == 0:
-                print('Partage ' + yellow + share + end + ' démonté')
+                print('Partage ' + share + red + ' démonté' + end)
         else:
-            print('Le partage ' + share + red + " n'est pas monté " + end)
+            print('Le partage ' + share + yellow + " n'est pas monté " + end)
 
     if sys.argv[1] == 'uf':
         if verif == 0:
             os.system('sudo umount -f ' + share)
             if verif == 0:
-                print('Partage ' + yellow + share + end + ' démonté')
+                print('Partage ' + share + red + ' démonté' + end)
         else:
-            print('Le partage ' + share + red + " n'est pas monté " + end)
+            print('Le partage ' + share + yellow + " n'est pas monté " + end)
 
     if sys.argv[1] == 's':
         if verif == 0:
