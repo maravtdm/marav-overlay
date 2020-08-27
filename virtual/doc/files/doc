@@ -43,9 +43,9 @@ if len(sys.argv) > 1:
 
     if sys.argv[1] == 's':
         if verif == 0:
-            print('Le partage ' + share + green + ' est monté ' + end)
+            print('Le partage ' + share + blue + ' est monté ' + end)
         else:
-            print('Le partage ' + share + red + " n'est pas monté " + end)
+            print('Le partage ' + share + yellow + " n'est pas monté " + end)
             sys.exit(0)
 else:
     print('Usage : ' + yellow + 'm' + end + ' (mount) ' + yellow + 'u' + end + ' (umount) ' + yellow + 'uf' + end + ' (force umount) ' + yellow + 's' + end + ' (status)')
