@@ -23,7 +23,7 @@ if len(sys.argv) > 1:
             if verif == 256:
                 print('Partage ' + share + green + ' monté' + end)
         else:
-            print('Le partage ' + share + blue + ' est déjà monté ' + end)
+            print('Le partage ' + share + green + ' est monté ' + end)
 
     if sys.argv[1] == 'u':
         if verif == 0:
@@ -43,7 +43,7 @@ if len(sys.argv) > 1:
 
     if sys.argv[1] == 's':
         if verif == 0:
-            print('Le partage ' + share + blue + ' est monté ' + end)
+            print('Le partage ' + share + green + ' est monté ' + end)
         else:
             print('Le partage ' + share + yellow + " n'est pas monté " + end)
             sys.exit(0)
