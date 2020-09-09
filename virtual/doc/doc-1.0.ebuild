@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
 src_install() {
-	dobin /usr/local/bin/${PN}
+	dobin ${FILESDIR}/${PN}
 	insinto /usr/local/bin/
-#	doins ${FILESDIR}/${PN}.desktop
+	doins ${FILESDIR}/${PN}.desktop
 }
